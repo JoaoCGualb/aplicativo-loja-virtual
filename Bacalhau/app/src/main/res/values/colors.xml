@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#015F32</color>
+    <color name="colorPrimaryDark">#055422</color>
+    <color name="colorAccent">#F42711</color>
+    <color name="colorAccentLight">#F7301F</color>
+    <color name="cinza_medio">#c6c6c6</color>
+    <color name="aguardando">#838383</color>
+    <color name="corPreco">#FF10B721</color>
+    <color name="confirmado">#009C17</color>
+    <color name="a_caminho">#D6A718</color>
+    <color name="cancelado">#CF291C</color>
+    <color name="finalizado">#008AC9</color>
+</resources>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Painel de Contole App Casa Sagres</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Painel de Controle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Pedidos Loja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pedidos.html">Pedidos Taberna</a>          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="anuncios_lista.html">
+              Anuncios
+            </a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="produtos_lista.html">
+                Produtos
+              </a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="" onclick="firebase.auth().signOut().then(() => {
+                  // Sign-out successful.
+                }).catch((error) => {
+                  // An error happened.
+                });">
+                  Sair
+                </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        <div class="col-md-4 offset-md-4 espacamento-70">
+                <form>
+                        <div class="espacamento-5 form-group">
+                                <label>Titulo</label>
+                                <input type="text" class="form-control" id="tituloInput" placeholder="Titulo">
+                        </div>
+                        <div class="espacamento-5 form-group">
+                                <label>Descrição</label>
+                                <input type="text" class="form-control" id="descricaoInput" placeholder="Descrição">
+                        </div>
+                        <div class="espacamento-5 form-group">
+                                <label>Preço</label>
+                                <input type="number" class="form-control" id="precoInput" placeholder="Preço">
+                        </div>
+                        <button class="espacamento-10 col-md-4 offset-md-4 btn btn-lg btn-block btn-primary" id="addButtonProduto">Adicionar</button>
+
+                </form>
+        </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script><script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+<script src="JS/app.js"> </script>
+<script src="JS/rtb-produto_editar.js"></script>
+</body>
+</html>

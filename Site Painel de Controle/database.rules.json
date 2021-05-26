@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "usuarios": {
+      "$uid": {
+        // Allow only authenticated content owners access to their data
+        ".read": true,
+        ".write": "auth != null && auth.uid == $uid"
+      },
+    },
+     "meus_pedidos":{
+       "$user_id": {
+        ".write": "$user_id === auth.uid",
+        ".read": "$user_id === auth.uid"
+      },
+        ".read": true,
+        ".write": true
+    },
+    ".read" : true,
+    ".write": "auth != null"
+  }
+}
